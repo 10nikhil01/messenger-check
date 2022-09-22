@@ -98,7 +98,7 @@ function SaveResponse() {
             return (
               <tr>
                 <td>{item.userName}</td>
-                <td>{item.userMessage}</td>
+                <td className="messagedata">{item.userMessage}</td>
               </tr>
             );
           })}
