@@ -102,3 +102,27 @@ td{
   text-align: left;
   padding-left: 1rem;
 }
+@media (max-width:1200px){
+  h2{
+    font-size: 3rem;
+  }
+  form{
+    width: 60%;
+  }
+  .nameHeading,
+  .messageHeading,#name,
+  #message {
+    margin-left: 1rem;
+  }
+  button{
+    padding: .8rem 1rem;
+    font-size: 1rem;
+  }
+  th{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  td{
+    font-size: 1.2rem;
+  }
+}
