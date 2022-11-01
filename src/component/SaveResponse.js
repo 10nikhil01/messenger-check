@@ -11,7 +11,7 @@ function SaveResponse() {
 
   if (!stopInfiniteLoop) {
     fetch(
-      "https://nikhil-accio-react-default-rtdb.asia-southeast1.firebasedatabase.app/message.json"
+      "https://feedback-form-e4f1f-default-rtdb.asia-southeast1.firebasedatabase.app/message.json"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -39,10 +39,20 @@ function SaveResponse() {
     console.log(`userName :${userName}`);
     console.log(`userMessage : ${userMessage}`);
 
+
+    if(userName===''){
+      alert("Enter Name")
+      return;
+    }
+
+    if(userMessage===''){
+      alert("Enter Feedback")
+      return;
+    }
     // Create (CRUD)
 
     fetch(
-      "https://nikhil-accio-react-default-rtdb.asia-southeast1.firebasedatabase.app/message.json",
+      "https://feedback-form-e4f1f-default-rtdb.asia-southeast1.firebasedatabase.app/message.json",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -59,6 +69,9 @@ function SaveResponse() {
       .then((data) => {
         console.log("data :", data);
       });
+
+    document.getElementById('name').value ='';
+    document.getElementById('message').value ='';
   };
 
   return (
